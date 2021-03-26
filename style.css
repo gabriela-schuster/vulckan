@@ -1,0 +1,29 @@
+:root {
+	--light: #d8dfe7;
+	--darker: #1b2229;
+	--dark: #1e2e41;
+	--bold: #ea6343;
+	--boldl: #f4d1a4;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.margin {
+	max-width: 1200px;
+	margin: auto;
+}
+
+body {
+	background-color: var(--darker);
+	font-family: 'Montserrat', sans-serif;
+	color: var(--boldl);
+}
+h1 {
+	color: var(--bold);
+	font-family: 'Averia Serif Libre', cursive;
+}
+p {
+	color: var(--light);
+}
