@@ -14,6 +14,12 @@
 	max-width: 1200px;
 	margin: auto;
 }
+.active {
+	background-color: var(--bold);
+}
+.none {
+	display: none;
+}
 
 body {
 	background-color: var(--darker);
@@ -25,13 +31,16 @@ h1, h2, h3 {
 }
 h1 {
 	font-size: 4.5rem;
+	line-height: 6rem;
 }
 h2 {
 	font-size: 2.3rem;
+	line-height: 3rem;
 	color: var(--bold);
 }
 h3 {
-	font-size: 1.5rem;
+	font-size: 1.6rem;
+	line-height: 2.5rem;
 	color: var(--dark);
 }
 p, a {
@@ -70,26 +79,24 @@ header .flex-head {
 }
 header h1 {
 	color: var(--dark);
+	margin-bottom: 2rem;
 }
 header img {
 	width: 60%;
-	/* border-radius: 50%; */
+	border-radius: 50%;
 	max-width: 300px;
 	margin-left: 3rem;
 }
-header button {
-	width: 80%;
+header .call {
+	width: 100%;
 	max-width: 400px;
 	padding: 10px;
-	margin-top: 2rem;
 
 	background-color: var(--bold);
 	box-shadow: 0 7px 10px #ea6243b2;
 
 	font-size: 1.5rem;
 	border-radius: 20px;
-	border: 0;
-	cursor: pointer;
 }
 
 .welcome {
@@ -113,6 +120,9 @@ header button {
 .specilities {
 	padding: 5rem;
 	text-align: center;
+	background-image: url(images/dessert.jpg);
+	background-size: cover;
+	background-position: center top;
 }
 .specilities .specility_grid {
 	margin-top: 3rem;
@@ -138,27 +148,27 @@ header button {
 	padding: 1rem;
 }
 
-.menu {
+#menu {
 	padding: 5rem 0;
 
 	background-color: var(--boldl);
 }
-.menu h2 {
+#menu h2 {
 	text-align: center;
 }
-.menu .food-menu-grid {
+#menu .food-menu-grid {
 	margin-top: 2rem;
 
 	display: grid;
 	grid-template: 1fr / 1fr 1fr 1fr;
-	column-gap: 1px;
 
 	text-align: center;
 }
 .food-menu-item {
 	padding: 1rem;
 	cursor: pointer;
-	background-color: var(--bold);
+	border: 1px solid var(--bold);
+	/* background-color: var(--bold); */
 }
 .food-display {
 	display: grid;
@@ -178,4 +188,48 @@ header button {
 }
 .food-text h3 {
 	color: var(--bold);
+}
+
+.about {
+	padding-top: 2rem;
+	background-color: var(--boldl);
+}
+.about .quote {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.quote h2 {
+	text-align: right;
+	margin-right: 2rem;
+}
+.quote .quote-text {
+	width: 50%;
+}
+.quote-text p {
+	transition: 0.5s;
+}
+.quote-text .quote-nav {
+	width: 20px;
+	height: 20px;
+	border: 0;
+
+	border-radius: 50%;
+	background-color: var(--bold);
+}
+.quote-nav:hover {
+	filter: brightness(1.5);
+}
+.about .card {
+	transform: translateY(50%);
+	padding: 2rem;
+
+	background-color: var(--bold);
+}
+.card h2 {
+	color: var(--dark);
+}
+
+footer {
+	padding: 5rem 0;
 }
