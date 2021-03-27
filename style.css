@@ -59,14 +59,6 @@ header {
 
 	text-align: center;
 }
-header nav {
-	height: 5vh;
-	padding: 0 2rem;
-
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
 header a {
 	margin-left: 1rem;
 }
@@ -209,7 +201,6 @@ header .call {
 	width: 20px;
 	height: 20px;
 	border: 0;
-	position: relative;
 
 	border-radius: 50%;
 	background-color: var(--bold);
@@ -219,7 +210,7 @@ header .call {
 	filter: brightness(1.5);
 }
 .about .card {
-	transform: translateY(50%);
+	transform: translateY(30%);
 	display: grid;
 	grid-template-areas:'left right';
 
@@ -252,4 +243,83 @@ header .call {
 
 footer {
 	padding: 5rem 0;
+}
+
+@media(max-width: 850px) {
+	.flex-head {
+		flex-direction: column;
+	}
+	header img {
+		max-width: 400px;
+		margin-left: 0;
+		margin-top: 5rem;
+	}
+
+	.specilities {
+		padding: 5rem 1rem;
+	}
+
+	#menu {
+		padding: 5rem 1rem;
+	}
+	
+	.quote-text .quote-nav {
+		width: 30px;
+		height: 30px;
+		margin-top: 1rem;
+	}
+	.left p {
+		width: 100%;
+	}
+}
+@media(max-width: 650px) {
+	html {
+		font-size: 90%;
+	}
+	h1 {
+		font-size: 3rem;
+		line-height: 4rem;
+	}
+
+	header img {
+		display: none;
+	}
+
+	.welcome {
+		grid-template: 1fr 1fr / 1fr;
+	}
+
+	.specilities .specility_grid {
+		grid-template: 1fr 1fr 1fr / 1fr;
+	}
+
+	#menu .food-menu-grid {
+		grid-template: 1fr 1fr 1fr / 1fr;
+	}
+	.food-display  {
+		margin-top: 3rem;
+	}
+	.food img {
+		height: 80%;
+	}
+
+	.about {
+		padding: 0 1rem;
+	}
+	.about .quote {
+		flex-direction: column;
+	}
+	.quote h2 {
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+	.quote .quote-text {
+		width: 100%;
+		text-align: center;
+	}
+	.about .card {
+		transform: translateY(10%);
+		grid-template-areas: 'left'
+							'right';
+	}
 }
