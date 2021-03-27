@@ -86,3 +86,28 @@ function changeDessert() {
 		dessertsButton.classList.add('active');
 	}
 }
+
+const button1 = document.querySelector('.text-1');
+const button2 = document.querySelector('.text-2');
+const button3 = document.querySelector('.text-3');
+let ps = document.querySelectorAll('.quote-text p')
+
+button1.addEventListener('click', text1);
+button2.addEventListener('click', text2);
+button3.addEventListener('click', text3);
+
+function text1() {
+	ps[0].classList.remove('none');
+	ps[1].classList.add('none');
+	ps[2].classList.add('none');
+}
+function text2() {
+	ps[0].classList.add('none');
+	ps[1].classList.remove('none');
+	ps[2].classList.add('none');
+}
+function text3() {
+	ps[0].classList.add('none');
+	ps[1].classList.add('none');
+	ps[2].classList.remove('none');
+}

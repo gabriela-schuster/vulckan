@@ -24,7 +24,6 @@
 body {
 	background-color: var(--darker);
 	font-family: 'Montserrat', sans-serif;
-	color: var(--boldl);
 }
 h1, h2, h3 {
 	font-family: 'Averia Serif Libre', cursive;
@@ -107,6 +106,7 @@ header .call {
 .welcome .red {
 	background-color: var(--bold);
 	text-align: right;
+	color: var(--boldl);
 }
 .welcome .yellow {
 	background-color: var(--boldl);
@@ -168,7 +168,7 @@ header .call {
 	padding: 1rem;
 	cursor: pointer;
 	border: 1px solid var(--bold);
-	/* background-color: var(--bold); */
+	transition: 0.5s;
 }
 .food-display {
 	display: grid;
@@ -191,7 +191,6 @@ header .call {
 }
 
 .about {
-	padding-top: 2rem;
 	background-color: var(--boldl);
 }
 .about .quote {
@@ -206,28 +205,49 @@ header .call {
 .quote .quote-text {
 	width: 50%;
 }
-.quote-text p {
-	transition: 0.5s;
-}
 .quote-text .quote-nav {
 	width: 20px;
 	height: 20px;
 	border: 0;
+	position: relative;
 
 	border-radius: 50%;
 	background-color: var(--bold);
+	cursor: pointer;
 }
 .quote-nav:hover {
 	filter: brightness(1.5);
 }
 .about .card {
 	transform: translateY(50%);
-	padding: 2rem;
+	display: grid;
+	grid-template-areas:'left right';
+
+	border: 2px solid var(--bold);
+
+}
+.card .left {
+	padding: 1rem;
 
 	background-color: var(--bold);
+	grid-area: left;
+}
+.left p {
+	width: 80%;
+}
+.card .right {
+	padding: 1rem;
+
+	background-color: var(--boldl);
+	grid-area: right;
 }
 .card h2 {
 	color: var(--dark);
+}
+.hours {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 footer {
