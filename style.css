@@ -2,7 +2,7 @@
 	--light: #d8dfe7;
 	--darker: #1b2229;
 	--dark: #1e2e41;
-	--bold: #ea6343;
+	--bold: #fa6343;
 	--boldl: #f4d1a4;
 }
 * {
@@ -20,10 +20,162 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	color: var(--boldl);
 }
-h1 {
-	color: var(--bold);
+h1, h2, h3 {
 	font-family: 'Averia Serif Libre', cursive;
 }
-p {
-	color: var(--light);
+h1 {
+	font-size: 4.5rem;
+}
+h2 {
+	font-size: 2.3rem;
+	color: var(--bold);
+}
+h3 {
+	font-size: 1.5rem;
+	color: var(--dark);
+}
+p, a {
+	color: var(--dark);
+	font-size: 1rem;
+	line-height: 1.6rem;
+}
+a {
+	text-decoration: none;
+}
+
+header {
+	height: 100vh;
+	background-image: url(images/hero.jpg);
+	background-position: center;
+	background-size: cover;
+
+	text-align: center;
+}
+header nav {
+	height: 5vh;
+	padding: 0 2rem;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+header a {
+	margin-left: 1rem;
+}
+header .flex-head {
+	height: 94.5vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+header h1 {
+	color: var(--dark);
+}
+header img {
+	width: 60%;
+	/* border-radius: 50%; */
+	max-width: 300px;
+	margin-left: 3rem;
+}
+header button {
+	width: 80%;
+	max-width: 400px;
+	padding: 10px;
+	margin-top: 2rem;
+
+	background-color: var(--bold);
+	box-shadow: 0 7px 10px #ea6243b2;
+
+	font-size: 1.5rem;
+	border-radius: 20px;
+	border: 0;
+	cursor: pointer;
+}
+
+.welcome {
+	width: 100%;
+	display: grid;
+	grid-template: 1fr / 1fr 1fr;
+}
+.welcome .red {
+	background-color: var(--bold);
+	text-align: right;
+}
+.welcome .yellow {
+	background-color: var(--boldl);
+	display: flex;
+	align-items: center;
+}
+.yellow, .red {
+	padding: 2rem;
+}
+
+.specilities {
+	padding: 5rem;
+	text-align: center;
+}
+.specilities .specility_grid {
+	margin-top: 3rem;
+	display: grid;
+	grid-template: 1fr / 1fr 1fr 1fr;
+	gap: 1.5rem;
+}
+.speciality {
+	background-color: var(--boldl);
+	text-align: left;
+}
+.speciality img{
+	width: 100%;
+}
+.speciality p:first-of-type {
+	padding: 0.5rem 1rem;
+
+	background-color: var(--bold);
+	color: var(--boldl);
+	font-family: 'Averia Serif Libre', cursive;
+}
+.speciality p {
+	padding: 1rem;
+}
+
+.menu {
+	padding: 5rem 0;
+
+	background-color: var(--boldl);
+}
+.menu h2 {
+	text-align: center;
+}
+.menu .food-menu-grid {
+	margin-top: 2rem;
+
+	display: grid;
+	grid-template: 1fr / 1fr 1fr 1fr;
+	column-gap: 1px;
+
+	text-align: center;
+}
+.food-menu-item {
+	padding: 1rem;
+	cursor: pointer;
+	background-color: var(--bold);
+}
+.food-display {
+	display: grid;
+	grid-template:  1fr 1fr 1fr 1fr 1fr / 1fr;
+}
+.food {
+	height: 7rem;
+	padding: 1rem 0;
+	display: flex;
+	align-items: center;
+}
+.food img {
+	height: 100%;
+}
+.food .food-text {
+	margin-left: 1rem;
+}
+.food-text h3 {
+	color: var(--bold);
 }
